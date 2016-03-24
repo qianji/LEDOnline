@@ -13,7 +13,6 @@
 # from django.db.models import Q
 # from django.http import HttpResponse, HttpResponseRedirect, Http404
 # from django.shortcuts import render, get_object_or_404, redirect
-from django.utils import timezone
 #
 # from .forms import PostForm
 # from .models import Post
@@ -116,14 +115,21 @@ from django.utils import timezone
 # 	return redirect("posts:list")
 
 
-from django.shortcuts import render, get_object_or_404, redirect
 import json
-from django.http import HttpResponse, HttpResponseRedirect, Http404
+
+from django.http import HttpResponse
+from django.shortcuts import render
+
+from LED.server import evaluateLEDExpression
 
 def ajax(request):
     data = {}
     if request.method == 'GET':
-        data['result'] = request.GET['expression']
+        command = request.GET['expression']
+        value = evaluateLEDExpression(command)
+        data['result'] = value
+        print(value)
+        #data['result'] = command
     return HttpResponse(json.dumps(data), content_type = "application/json")
 
 def home(request):
