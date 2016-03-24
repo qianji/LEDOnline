@@ -93,9 +93,9 @@
           jqconsole.MoveToEnd();
           handler();
         });
-        jqconsole.RegisterMatching('{', '}', 'brace');
-        jqconsole.RegisterMatching('(', ')', 'paran');
-        jqconsole.RegisterMatching('[', ']', 'bracket');
+        //jqconsole.RegisterMatching('{', '}', 'brace');
+        //jqconsole.RegisterMatching('(', ')', 'paran');
+        //jqconsole.RegisterMatching('[', ']', 'bracket');
         // Handle a command.
         var handler = function(command) {
           if (command) {
@@ -110,15 +110,15 @@
           }
           jqconsole.Prompt(true, handler, function(command) {
             // Continue line if can't compile the command.
-            try {
-              Function(command);
-            } catch (e) {
-              if (/[\[\{\(]$/.test(command)) {
-                return 1;
-              } else {
-                return 0;
-              }
-            }
+{#            try {#}
+{#              Function(command);#}
+{#            } catch (e) {#}
+{#              if (/[\[\{\(]$/.test(command)) {#}
+{#                return 1;#}
+{#              } else {#}
+{#                return 0;#}
+{#              }#}
+{#            }#}
             return false;
           });
         };
