@@ -100,7 +100,10 @@
         var handler = function(command) {
           if (command) {
             try {
-              jqconsole.Write('==> ' + window.eval(command) + '\n');
+                $.get('ajax/', {expression: command}, function(data){
+                    jqconsole.Write('==> ' + data.result + '\n');
+                });
+              //jqconsole.Write('==> ' + window.eval(command) + '\n');
             } catch (e) {
               jqconsole.Write('ERROR: ' + e.message + '\n');
             }

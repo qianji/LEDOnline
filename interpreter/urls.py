@@ -20,9 +20,12 @@
 
 from .views import (
     home,
+    ajax,
 )
 from django.conf.urls import url
 from django.contrib import admin
 urlpatterns = [
 	url(r'^$', home, name='home'),
+    url(r'^ajax/$', ajax, name='ajax'),
+
 ]

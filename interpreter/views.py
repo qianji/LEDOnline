@@ -8,11 +8,11 @@
 # except:
 #     pass
 #
-from django.contrib import messages
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.db.models import Q
-from django.http import HttpResponse, HttpResponseRedirect, Http404
-from django.shortcuts import render, get_object_or_404, redirect
+# from django.contrib import messages
+# from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+# from django.db.models import Q
+# from django.http import HttpResponse, HttpResponseRedirect, Http404
+# from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 #
 # from .forms import PostForm
@@ -114,6 +114,17 @@ from django.utils import timezone
 # 	instance.delete()
 # 	messages.success(request, "Successfully deleted")
 # 	return redirect("posts:list")
+
+
+from django.shortcuts import render, get_object_or_404, redirect
+import json
+from django.http import HttpResponse, HttpResponseRedirect, Http404
+
+def ajax(request):
+    data = {}
+    if request.method == 'GET':
+        data['result'] = request.GET['expression']
+    return HttpResponse(json.dumps(data), content_type = "application/json")
 
 def home(request):
     context = {
