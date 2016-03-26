@@ -4,14 +4,172 @@
 {% block style %}
     <link rel="stylesheet" type="text/css" href="{% static "css/ansi.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "css/interpreter.css" %}">
+
+    <link rel="stylesheet" href="//api.jquery.com/jquery-wp-content/themes/jquery/css/base.css?v=1">
+    <link rel="stylesheet" href="//api.jquery.com/jquery-wp-content/themes/api.jquery.com/style.css">
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='https://api.w.org/' href='//api.jquery.com/wp-json/'/>
+
 {% endblock style %}
 {% block javascript %}
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js" type="text/javascript"
-        charset="utf-8"></script>
-<script src='{% static "js/jqconsole.js" %}'></script>
-<script src='{% static "js/interpreter.js" %}'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js" type="text/javascript"
+            charset="utf-8"></script>
+    <script src='{% static "js/jqconsole.js" %}'></script>
+    <script src='{% static "js/interpreter.js" %}'></script>
 {% endblock javascript %}
 
 {% block content %}
-    <div id="console"></div>
+
+    <div id="container">
+        <div id="logo-events" class="constrain clearfix">
+            <aside>
+                <div id="broadcast"><a href="Test" rel="nofollow" target="_blank" title="Try out LED">Try out<img src="../static/LED.png"
+                                                                                                           title="Try out LED online evaluator"
+                                                                                                           alt="Try out LED online evaluator"
+                                                                                                           border="0"
+                                                                                                           width="400"
+                                                                                                           height="100"></a></div>
+            </aside>
+        </div>
+        <nav id="main" class="constrain clearfix">
+            <div class="menu-top-container">
+                <ul id="menu-top" class="menu">
+                    <li class="menu-item"><a href="http://jquery.com/download/">Download</a></li>
+                    <li class="menu-item current"><a href="http://api.jquery.com/">API Documentation</a></li>
+
+                </ul>
+            </div>
+
+            <form method="get" class="searchform" action="//api.jquery.com/">
+                <button type="submit" class="icon-search"><span class="visuallyhidden">search</span></button>
+                <label>
+                    <span class="visuallyhidden">Search jQuery API Documentation</span>
+                    <input type="text" name="s" value=""
+                           placeholder="Search">
+                </label>
+            </form>
+        </nav>
+        <div id="content-wrapper" class="clearfix row">
+            <div class="content-right listing twelve columns">
+                <div id="content" class="four cloumns">
+                    <h1 class="page-title">jQuery API</h1>
+                    <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document
+                        traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use
+                        API that works across a multitude of browsers. If you're new to jQuery, we recommend that you
+                        check out the <a href="http://learn.jquery.com/">jQuery Learning Center</a>.</p>
+                    <p>If you're updating to a newer version of jQuery, be sure to read the release notes published on
+                        <a href="http://blog.jquery.com/">our blog</a>. If you're coming from a version prior 1.9, you
+                        should check out the <a href="http://jquery.com/upgrade-guide/1.9/">1.9 Upgrade Guide</a> as
+                        well.</p>
+                    <p>Note that this is the API documentation for jQuery core. Other projects have API docs in other
+                        locations:</p>
+                    <ul>
+                        <li><a href="http://api.jqueryui.com/">jQuery UI API docs</a></li>
+                        <li><a href="http://api.jquerymobile.com">jQuery Mobile API docs</a></li>
+                        <li><a href="http://api.qunitjs.com">QUnit API docs</a></li>
+                    </ul>
+                    <hr>
+
+
+                    <article id="post-5"
+                             class="post-5 post type-post status-publish format-standard hentry category-miscellaneous-traversal category-65 category-75">
+                        <header class="entry-header">
+                            <div class="entry-meta">
+                                <span class="category"><a href="//api.jquery.com/category/traversing/">Traversing</a> &gt; <a
+                                        href="//api.jquery.com/category/traversing/miscellaneous-traversal/">Miscellaneous
+                                    Traversing</a></span></div>
+                            <h1 class="entry-title">
+                                <a href="//api.jquery.com/add/" title="Permalink to .add()" rel="bookmark">.add()</a>
+                            </h1>
+                        </header>
+
+                        <div class="entry-summary">
+                            <p>Create a new jQuery object with elements added to the set of matched elements.</p>
+                        </div><!-- .entry-summary -->
+                    </article>
+
+
+                    </header>
+
+                    <div class="entry-summary">
+                        <p>Selects all elements that are the nth-child of their parent, counting from the last element
+                            to the first.</p>
+                    </div><!-- .entry-summary -->
+                    </article>
+
+
+                    <article id="post-559"
+                             class="post-559 post type-post status-publish format-standard hentry category-form-selectors category-jquery-selector-extensions category-65">
+                        <header class="entry-header">
+                            <div class="entry-meta">
+                                <span class="category"><a href="//api.jquery.com/category/selectors/">Selectors</a> &gt; <a
+                                        href="//api.jquery.com/category/selectors/form-selectors/">Form</a></span><span
+                                    class="category-divider"> | </span><span class="category"><a
+                                    href="//api.jquery.com/category/selectors/">Selectors</a> &gt; <a
+                                    href="//api.jquery.com/category/selectors/jquery-selector-extensions/">jQuery
+                                Extensions</a></span></div>
+                            <h1 class="entry-title">
+                                <a href="//api.jquery.com/text-selector/" title="Permalink to :text Selector"
+                                   rel="bookmark">:text Selector</a>
+                            </h1>
+                        </header>
+                    </article>
+
+                </div>
+                <div id="sidebar" class="widget-area four columns" role="complementary">
+                    <aside id="categories" class="widget">
+                        <ul>
+                            <li class="cat-item cat-item-1"><a href="//api.jquery.com/category/ajax/">Ajax</a>
+                                <ul class='children'>
+                                    <li class="cat-item cat-item-2"><a
+                                            href="//api.jquery.com/category/ajax/global-ajax-event-handlers/">Global
+                                        Ajax Event Handlers</a>
+                                    </li>
+                                    <li class="cat-item cat-item-3"><a
+                                            href="//api.jquery.com/category/ajax/helper-functions/">Helper Functions</a>
+                                    </li>
+                                    <li class="cat-item cat-item-4"><a
+                                            href="//api.jquery.com/category/ajax/low-level-interface/">Low-Level
+                                        Interface</a>
+                                    </li>
+                                    <li class="cat-item cat-item-5"><a
+                                            href="//api.jquery.com/category/ajax/shorthand-methods/">Shorthand
+                                        Methods</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="cat-item cat-item-6"><a
+                                    href="//api.jquery.com/category/attributes/">Attributes</a>
+                            </li>
+                            <li class="cat-item cat-item-7"><a href="//api.jquery.com/category/callbacks-object/">Callbacks
+                                Object</a>
+                            </li>
+                            <li class="cat-item cat-item-8"><a href="//api.jquery.com/category/core/">Core</a>
+                            </li>
+                            <li class="cat-item cat-item-9"><a href="//api.jquery.com/category/css/">CSS</a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                {#                <div id="console" class="four cloumns"></div>#}
+            </div>
+        </div>
+
+    </div>
 {% endblock content %}
+
+
