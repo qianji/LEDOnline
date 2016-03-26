@@ -57,21 +57,21 @@
                 return;
             }
 
-            var props = propStartingWith(window, text);
-            if (props.length) {
-                if (!$('.suggest').length) {
-                    $('<div/>').addClass('suggest').appendTo($('.jqconsole'));
-                }
-                $('.suggest').empty().show();
-                props.forEach(function (prop) {
-                    $('.suggest').append('<div>' + prop + '</div>');
-                });
-                var pos = $('.jqconsole-cursor').offset();
-                pos.left += 20;
-                $('.suggest').offset(pos);
-            } else {
-                $('.suggest').hide();
-            }
+            //var props = propStartingWith(window, text);
+            //if (props.length) {
+            //    if (!$('.suggest').length) {
+            //        $('<div/>').addClass('suggest').appendTo($('.jqconsole'));
+            //    }
+            //    $('.suggest').empty().show();
+            //    props.forEach(function (prop) {
+            //        $('.suggest').append('<div>' + prop + '</div>');
+            //    });
+            //    var pos = $('.jqconsole-cursor').offset();
+            //    pos.left += 20;
+            //    $('.suggest').offset(pos);
+            //} else {
+            //    $('.suggest').hide();
+            //}
         });
 
         jqconsole.SetControlKeyHandler(function (e) {

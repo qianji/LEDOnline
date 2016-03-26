@@ -14,9 +14,15 @@ from LED.Compiler import *
 
 def evaluateLEDExpression(command):
     e = command
-    expression,eFlag = tokens(e)
+    try:
+        expression,eFlag = tokens(e)
+    except:
+        return 'Failed to tokenize the expression.The last 10 valid tokens are' + ' ' +' '.join(expression[-10:])
     if eFlag:
-        tree, tFlag = parseExpression(expression)
+        try:
+            tree, tFlag = parseExpression(expression)
+        except:
+            return 'Failed to parse the expression or definition.'
         if tFlag:
             try:
                 value = val(tree.expression())
@@ -26,7 +32,7 @@ def evaluateLEDExpression(command):
                     return prettyString(value)
             except:
                 return 'Failed to evaluate the expression. It is not a valid expression'
-            return "error"
+            return 'Failed to evaluate the expression. It is not a valid expression'
         d,defFlag = parseDfn(expression)
         if defFlag:
             #print('parsing #',i,"function successfully",' '.join(funcs[i]))
@@ -34,7 +40,7 @@ def evaluateLEDExpression(command):
         else:
             return 'Failed to parse the expression or definition.'
     else:
-        return 'Failed to tokenize the expression.The last 10 valid tokens are' + expression[-10:]
+        return 'Failed to tokenize the expression.The last 10 valid tokens are' + ' ' +  ' '.join(expression[-10:])
 
 #evaluateLEDExpression()
 

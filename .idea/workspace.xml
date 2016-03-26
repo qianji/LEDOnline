@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b29b9ff1-97f9-4799-a4fe-05544bd5c18d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/objects_and_values.html" afterPath="$PROJECT_DIR$/templates/objects_and_values.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LED/server.py" afterPath="$PROJECT_DIR$/LED/server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/interpreter.js" afterPath="$PROJECT_DIR$/static/js/interpreter.js" />
     </list>
     <ignored path="LEDOnline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,11 +50,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="objects_and_values.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="interpreter.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/interpreter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33707866">
+              <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="objects_and_values.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/objects_and_values.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7011686">
+            <state vertical-scroll-proportion="-17.5">
               <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Evaluater.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LED/Evaluater.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LED/server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="91" selection-start-line="42" selection-start-column="91" selection-end-line="42" selection-end-column="91" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jqconsole.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/jqconsole.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1554" column="39" selection-start-line="1554" selection-start-column="39" selection-end-line="1554" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -90,9 +131,7 @@
         <option value="$PROJECT_DIR$/LED/Evaluater.py" />
         <option value="$PROJECT_DIR$/LED/LEDProgram.py" />
         <option value="$PROJECT_DIR$/LED/Parser.py" />
-        <option value="$PROJECT_DIR$/LED/server.py" />
         <option value="$PROJECT_DIR$/LED/UnitTest.py" />
-        <option value="$PROJECT_DIR$/static/js/interpreter.js" />
         <option value="$PROJECT_DIR$/static/css/interpreter.css" />
         <option value="$PROJECT_DIR$/templates/messages_display.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
@@ -107,6 +146,8 @@
         <option value="$PROJECT_DIR$/templates/sider_bar.html" />
         <option value="$PROJECT_DIR$/templates/base_spec.html" />
         <option value="$PROJECT_DIR$/templates/objects_and_values.html" />
+        <option value="$PROJECT_DIR$/LED/server.py" />
+        <option value="$PROJECT_DIR$/static/js/interpreter.js" />
       </list>
     </option>
   </component>
@@ -254,6 +295,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="LEDOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LEDOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LEDOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LED" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -658,7 +713,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458973977901</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="edit spec&#10;">
+      <created>1458974771857</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1458974771857</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -706,7 +767,8 @@
     <MESSAGE value="remove prompt" />
     <MESSAGE value="home page setup" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="edit spec&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit spec&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -845,13 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LED/Evaluater.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LED/Expression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -891,13 +946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.024077047">
           <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LED/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63325185">
-          <caret line="36" column="82" selection-start-line="36" selection-start-column="82" selection-end-line="36" selection-end-column="82" />
         </state>
       </provider>
     </entry>
@@ -1013,26 +1061,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/interpreter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3225058">
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/ansi.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jqconsole.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1554" column="39" selection-start-line="1554" selection-start-column="39" selection-end-line="1554" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1105,8 +1137,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/objects_and_values.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7011686">
+        <state vertical-scroll-proportion="-17.5">
           <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LED/Evaluater.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LED/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="91" selection-start-line="42" selection-start-column="91" selection-end-line="42" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jqconsole.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1554" column="39" selection-start-line="1554" selection-start-column="39" selection-end-line="1554" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/interpreter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33707866">
+          <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
           <folding />
         </state>
       </provider>
