@@ -20,12 +20,18 @@
 
 from .views import (
     home,
+    evaluater,
     ajax,
+    objects_and_values,
 )
 from django.conf.urls import url
 from django.contrib import admin
 urlpatterns = [
 	url(r'^$', home, name='home'),
-    url(r'^ajax/$', ajax, name='ajax'),
+    url(r'^evaluater/$', evaluater, name='evaluater'),
+    url(r'^evaluater/ajax/$', ajax, name='ajax'),
+
+    url(r'^objects_and_values/$', objects_and_values, name='objects_and_values'),
+
 
 ]

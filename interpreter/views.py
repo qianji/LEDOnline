@@ -132,9 +132,11 @@ def ajax(request):
         #data['result'] = command
     return HttpResponse(json.dumps(data), content_type = "application/json")
 
+def evaluater(request):
+    return render(request, "evaluater.html")
+
 def home(request):
-    context = {
-		"title": "title",
-		"instance": "hello",
-	}
-    return render(request, "index.html", context)
+    return render(request, "index.html")
+
+def objects_and_values(request):
+    return render(request,"objects_and_values.html")

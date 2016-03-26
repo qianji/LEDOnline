@@ -1,0 +1,86 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block head_title %}{% endblock head_title %}</title>
+    <link rel="stylesheet" href="//api.jquery.com/jquery-wp-content/themes/jquery/css/base.css?v=1">
+    <link rel="stylesheet" href="//api.jquery.com/jquery-wp-content/themes/api.jquery.com/style.css">
+
+{#    <link rel="stylesheet" href='{% static "css/jquery_base.css" %}'>#}
+{#    <link rel="stylesheet" href='{% static "css/jquery_style.css" %}'>#}
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='https://api.w.org/' href='//api.jquery.com/wp-json/'/>
+    {% block style %}
+
+    {% endblock style %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js" type="text/javascript"
+            charset="utf-8"></script>
+    {% block javascript %}{% endblock javascript %}
+
+</head>
+
+
+<body class="api jquery home blog single-author">
+<div id="container">
+    <div id="logo-events" class="constrain clearfix">
+        <aside>
+            <div id="broadcast"><a href="/evaluater"><img
+                    src="../static/LED.png"
+                    title="Try out LED online evaluator"
+                    alt="Try out LED online evaluator"
+                    border="0"
+                    width="400"
+                    height="100"></a></div>
+        </aside>
+    </div>
+    <nav id="main" class="constrain clearfix">
+
+        <div class="menu-top-container">
+            <ul id="menu-top" class="menu">
+                {% block menu-top %}
+                    <li class="menu-item"><a href="/">Download</a></li>
+                    <li class="menu-item current"><a href="/">LED Specification</a></li>
+                    <li class="menu-item "><a href="/">Online Evaluater</a></li>
+                {% endblock menu-top %}
+
+
+            </ul>
+        </div>
+
+        <form method="get" class="searchform" action="/">
+            <button type="submit" class="icon-search"><span class="visuallyhidden">search</span></button>
+            <label>
+                <span class="visuallyhidden">Search jQuery API Documentation</span>
+                <input type="text" name="s" value=""
+                       placeholder="Search">
+            </label>
+        </form>
+    </nav>
+    <div id="content-wrapper" class="clearfix row">
+        <div class="content-right listing twelve columns">
+            <div id="content">
+                {% block content %}
+                {% endblock content %}
+            </div>
+            {% include 'sider_bar.html' %}
+        </div>
+    </div>
+</div>
+<footer class="clearfix simple">
+</footer>
+
+</body>
+</html>
