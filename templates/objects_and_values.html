@@ -1,4 +1,36 @@
 {% extends "base_spec.html" %}
 {% load staticfiles %}
 {% block title %}Objects and Values{% endblock title %}
-{{ super.block }}
+{% block content %}
+        <h1 class="page-title">Objects and Values</h1>
+    <p>
+        Numerals representing rational numbers in LED are defined as follows:
+        <ul>
+        <li>
+            An <i><b>integer numeral</b></i> is a string of 1 or more  decimal digits (0-9)
+
+        </li>
+        <li>
+            A <i><b>repeating block</b></i> consists of a left parenthesis, followed by one or more decimal digits, followed by two periods, followed by a right  parenthesis.
+        </li>
+        <li>
+            A <i><b>decimal fraction</b></i> is either
+            <ul>
+                <li>
+                    a decimal point  followed by one or more digits, or
+                </li>
+                <li>
+                    a decimal point, followed by zero or more digits, followed by a repeating block
+                </li>
+            </ul>
+
+        </li>
+        <li>
+            A <i><b>numeral</b></i> is either an integer numeral, a decimal fraction, or an integer numeral followed by a decimal fraction. For example, the following are LED numerals:</br>
+            &nbsp&nbsp&nbsp&nbsp 714 &nbsp&nbsp&nbsp 01 &nbsp&nbsp&nbsp 21.7 &nbsp&nbsp&nbsp   .3(145..) &nbsp&nbsp&nbsp  0.(3..) &nbsp&nbsp&nbsp  000
+            &nbsp&nbsp&nbsp 3.96(721..)
+        </li>
+        </ul>
+    </p>
+
+{% endblock content %}
