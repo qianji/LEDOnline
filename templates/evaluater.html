@@ -2,15 +2,6 @@
 {% load staticfiles %}
 {% block title %}LED Online Evaluater{% endblock title %}
     {% block style %}
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-              integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-              crossorigin="anonymous">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
-              integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
-              crossorigin="anonymous">
 
         <link rel='stylesheet' href='{% static "css/base.css" %}'/>
                 <link rel='stylesheet' href='{% static "css/ansi.css" %}'/>
@@ -34,7 +25,8 @@
     <li class="menu-item current"><a href='{% url "interpreter:evaluater" %}'>Online Evaluater</a></li>
 {% endblock menu-top %}
 {% block content %}
-    <h1>LED Online Evaluater</h1>
-    <p></p>
+    <h1 class="page-title">LED Online Evaluater</h1>
+    <p>test</p>
     <div id="console"></div>
+
 {% endblock content %}
