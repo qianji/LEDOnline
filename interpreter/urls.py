@@ -23,6 +23,7 @@ from .views import (
     evaluater,
     ajax,
     objects_and_values,
+tutorials
 )
 from django.conf.urls import url
 from django.contrib import admin
@@ -32,6 +33,8 @@ urlpatterns = [
     url(r'^evaluater/ajax/$', ajax, name='ajax'),
 
     url(r'^objects_and_values/$', objects_and_values, name='objects_and_values'),
+        url(r'^tutorials/$', tutorials, name='tutorials'),
+
 
 
 ]

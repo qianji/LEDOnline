@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="//api.jquery.com/jquery-wp-content/themes/jquery/css/base.css?v=1">
     <link rel="stylesheet" href="//api.jquery.com/jquery-wp-content/themes/api.jquery.com/style.css">
 
-{#    <link rel="stylesheet" href='{% static "css/jquery_base.css" %}'>#}
-{#    <link rel="stylesheet" href='{% static "css/jquery_style.css" %}'>#}
+    {#    <link rel="stylesheet" href='{% static "css/jquery_base.css" %}'>#}
+    {#    <link rel="stylesheet" href='{% static "css/jquery_style.css" %}'>#}
     <style type="text/css">
         img.wp-smiley,
         img.emoji {
@@ -60,23 +60,26 @@
             </ul>
         </div>
 
-{#        <form method="get" class="searchform" action="/">#}
-{#            <button type="submit" class="icon-search"><span class="visuallyhidden">search</span></button>#}
-{#            <label>#}
-{#                <span class="visuallyhidden">Search jQuery API Documentation</span>#}
-{#                <input type="text" name="s" value=""#}
-{#                       placeholder="Search">#}
-{#            </label>#}
-{#        </form>#}
+        {#        <form method="get" class="searchform" action="/">#}
+        {#            <button type="submit" class="icon-search"><span class="visuallyhidden">search</span></button>#}
+        {#            <label>#}
+        {#                <span class="visuallyhidden">Search jQuery API Documentation</span>#}
+        {#                <input type="text" name="s" value=""#}
+        {#                       placeholder="Search">#}
+        {#            </label>#}
+        {#        </form>#}
     </nav>
     <div id="content-wrapper" class="clearfix row">
-        <div class="content-right listing twelve columns">
-            <div id="content">
-                {% block content %}
-                {% endblock content %}
+        {% block content-wrapper %}
+            <div class="content-right listing twelve columns">
+                <div id="content">
+                    {% block content %}
+                    {% endblock content %}
+                </div>
+                {% include 'sider_bar.html' %}
             </div>
-            {% include 'sider_bar.html' %}
-        </div>
+        {% endblock content-wrapper %}
+
     </div>
 </div>
 <footer class="clearfix simple">

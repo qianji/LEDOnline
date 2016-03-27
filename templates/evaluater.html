@@ -7,6 +7,7 @@
                 <link rel='stylesheet' href='{% static "css/ansi.css" %}'/>
                 <link rel='stylesheet' href='{% static "css/interpreter.css" %}'/>
 
+
     {% endblock style %}
 
     {% block javascript %}
@@ -23,10 +24,13 @@
     <li class="menu-item"><a href="/">Download</a></li>
     <li class="menu-item"><a href="/">LED Specification</a></li>
     <li class="menu-item current"><a href='{% url "interpreter:evaluater" %}'>Online Evaluater</a></li>
+            <li class="menu-item "><a href='{% url "interpreter:tutorials" %}'>Tutorials</a></li>
+
 {% endblock menu-top %}
 {% block content %}
     <h1 class="page-title">LED Online Evaluater</h1>
-    <p>test</p>
+               <h2> <a href='{% url "interpreter:tutorials"%}' target="_blank"> Tutorials </a></h2>
+
     <div id="console"></div>
 
 {% endblock content %}

@@ -140,3 +140,6 @@ def home(request):
 
 def objects_and_values(request):
     return render(request,"objects_and_values.html")
+
+def tutorials(request):
+    return render(request,"tutorials.html")

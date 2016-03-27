@@ -1,0 +1,46 @@
+{% extends "base_spec.html" %}
+{% load staticfiles %}
+{% block title %}LED Tutorials{% endblock title %}
+
+{% block menu-top %}
+    <li class="menu-item"><a href="/">Download</a></li>
+    <li class="menu-item "><a href="/">LED Specification</a></li>
+    <li class="menu-item "><a href='{% url "interpreter:evaluater" %}'>Online Evaluater</a></li>
+    <li class="menu-item current "><a href='{% url "interpreter:tutorials" %}'>Tutorials</a></li>
+
+{% endblock menu-top %}
+{% block content-wrapper %}
+    <div class="content-full twelve columns">
+        <div id="content">
+            <h2>Examples</h2>
+            <p>Please try the following expressions in <a href='{% url "interpreter:evaluater" %}' target="_blank"> LED
+                Evaluater</a></p>
+
+            <div class="syntaxhighlighter javascript">
+                <code>{1,2,3} U {4,5,6}</code>
+
+            </div>
+            <div class="syntaxhighlighter javascript">
+                <code><1,2>[1]</code>
+
+            </div>
+                        <div class="syntaxhighlighter javascript">
+                <code>some x in {2,3,4}.x>2</code>
+
+            </div>
+                        <div class="syntaxhighlighter javascript">
+                <code>{x|x in {1..9} & 1 < x < 3}</code>
+
+            </div>
+                        <div class="syntaxhighlighter javascript">
+                <code>Nrsec[x in {1..3}]{y|y in {1..x} & y<4}</code>
+
+            </div>
+                        <div class="syntaxhighlighter javascript">
+                <code>{1..10}\{1..3}</code>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock content-wrapper %}
