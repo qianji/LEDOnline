@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b29b9ff1-97f9-4799-a4fe-05544bd5c18d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/LED.png" afterPath="$PROJECT_DIR$/static/LED.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/logo.png" afterPath="$PROJECT_DIR$/static/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/LEDOnline.iml" afterPath="$PROJECT_DIR$/.idea/LEDOnline.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LED/__init__.py" afterPath="$PROJECT_DIR$/LED/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LEDOnline/__init__.py" afterPath="$PROJECT_DIR$/LEDOnline/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LEDOnline/settings.py" afterPath="$PROJECT_DIR$/LEDOnline/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LEDOnline/urls.py" afterPath="$PROJECT_DIR$/LEDOnline/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LEDOnline/wsgi.py" afterPath="$PROJECT_DIR$/LEDOnline/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/__init__.py" afterPath="$PROJECT_DIR$/interpreter/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/admin.py" afterPath="$PROJECT_DIR$/interpreter/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/apps.py" afterPath="$PROJECT_DIR$/interpreter/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/migrations/__init__.py" afterPath="$PROJECT_DIR$/interpreter/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/models.py" afterPath="$PROJECT_DIR$/interpreter/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/tests.py" afterPath="$PROJECT_DIR$/interpreter/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/urls.py" afterPath="$PROJECT_DIR$/interpreter/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/views.py" afterPath="$PROJECT_DIR$/interpreter/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/interpreter.css" afterPath="$PROJECT_DIR$/static/css/interpreter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/jquery_base.css" afterPath="$PROJECT_DIR$/static/css/jquery_base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/jquery_style.css" afterPath="$PROJECT_DIR$/static/css/jquery_style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/interpreter.js" afterPath="$PROJECT_DIR$/static/js/interpreter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base_spec.html" afterPath="$PROJECT_DIR$/templates/base_spec.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/evaluater.html" afterPath="$PROJECT_DIR$/templates/evaluater.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/objects_and_values.html" afterPath="$PROJECT_DIR$/templates/objects_and_values.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/sider_bar.html" afterPath="$PROJECT_DIR$/templates/sider_bar.html" />
     </list>
     <ignored path="LEDOnline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -723,7 +692,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458974771857</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix evalauter layout bug">
+      <created>1459096063851</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1459096063851</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -732,6 +707,7 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37921798" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -740,7 +716,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -772,7 +747,8 @@
     <MESSAGE value="home page setup" />
     <MESSAGE value="refactor" />
     <MESSAGE value="edit spec&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit spec&#10;" />
+    <MESSAGE value="fix evalauter layout bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix evalauter layout bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1041,6 +1017,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1075,6 +1052,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9262899">
           <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1082,6 +1060,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="35.53317">
           <caret line="3838" column="1" selection-start-line="3838" selection-start-column="1" selection-end-line="3838" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1089,6 +1068,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625">
           <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
