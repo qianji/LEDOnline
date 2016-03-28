@@ -1,0 +1,659 @@
+{% load staticfiles %}
+<div><p class="c25 c43"><span></span></p></div><p><span class="c10 c24">1. objects</span></p><p class="c17 c25"><span
+        class="c1"></span></p><p class="c17 c25"><span class="c1"></span></p><p class="c17"><span
+        class="c1">An LED </span><span class="c6 c1">datum</span><span class="c1">&nbsp;is a rational number, an atom, a finite set of data, a tuple of data, or &nbsp;a lambda expression.</span>
+</p><p class="c17 c25"><span class="c1"></span></p><p class="c17"><span class="c1">Rational numbers are written in LED as numerals. </span><span
+        class="c1">A</span><span class="c6 c1">&nbsp;numeral </span><span class="c1">&nbsp;consists of one or more digits, possibly followed is a decimal point and one or more additional digits. For example, </span><span
+        class="c5 c1">21.221 </span><span class="c1">&nbsp;is a numeral. </span></p><p class="c17 c25"><span
+        class="c1"></span></p><p class="c17"><span class="c1">A</span><span class="c1">&nbsp;</span><span class="c6 c1">truth value</span><span
+        class="c1">&nbsp;is either truth or falsehood, written in LED as </span><span class="c5 c1">true</span><span
+        class="c1">&nbsp;and</span><span class="c6 c1">&nbsp;</span><span class="c5 c1">false</span><span class="c1">, respectively.</span>
+</p><p class="c17 c25"><span class="c1"></span></p><p class="c17"><span class="c1">A</span><span
+        class="c1">&nbsp;</span><span class="c6 c1">atom</span><span class="c10 c1">&nbsp;</span><span class="c1">consists of a backquote, followed by a letter, followed by zero or more letters and digits. For example, </span><span
+        class="c5 c1">`foobar2 </span><span class="c1">is a atom. LED is case sensitive, so for example</span><span
+        class="c5 c1">&nbsp;`foo </span><span class="c1">and </span><span class="c5 c1">`Foo</span><span class="c1">&nbsp;are different atoms.</span>
+</p><p class="c17 c25"><span class="c1"></span></p><p class="c17"><span class="c1">A </span><span class="c6 c1">lambda expression</span><span
+        class="c1">&nbsp;consists of the identifier </span><span class="c5 c1">lambda</span><span class="c1">, followed by one or more variables, a period (</span><span
+        class="c5 c1">.</span><span class="c1">), &nbsp;and then a term. For example, &nbsp;</span><span class="c5 c1">lambda i j. i+(2*j) </span><span
+        class="c1">is a lambda expression.</span></p><p class="c17 c25"><span class="c1"></span></p><p class="c17"><span
+        class="c1">A roster set can be written as zero or more terms, separated by commas and enclosed in braces. For example, </span><span
+        class="c5 c1">{1,2,3} </span><span class="c1">is a set. As usual</span><span class="c5 c1">{</span><span
+        class="c6 c1">x</span><span class="c1 c4">1</span><span class="c5 c1">,</span><span class="c1">...</span><span
+        class="c5 c1">,</span><span class="c6 c1">x</span><span class="c6 c1 c4">n</span><span
+        class="c5 c1">}</span><span class="c1">&nbsp;is set whose members are </span><span class="c6 c1">x</span><span
+        class="c1 c4">1</span><span class="c5 c1">,</span><span class="c1">...</span><span class="c5 c1">,</span><span
+        class="c6 c1">x</span><span class="c6 c1 c4">n</span><span class="c1">. </span></p><p class="c17 c25"><span
+        class="c1"></span></p><p class="c17"><span class="c1">An </span><span class="c6 c1">n</span><span
+        class="c1">-</span><span class="c6 c1">tuple</span><span class="c1">, where </span><span
+        class="c6 c1">n</span><span class="c1">&nbsp;</span><span class="c32 c1">&ge; </span><span class="c1">2, is written as </span><span
+        class="c6 c1">n</span><span class="c1">&nbsp;terms, separated by commas and enclosed in parentheses. For example, </span><span
+        class="c5 c1">(1,2,3)</span><span class="c1">&nbsp;is a 3-tuple. As usual, </span><span
+        class="c5 c1">(</span><span class="c6 c1">x</span><span class="c1 c4">1</span><span class="c5 c1">,</span><span
+        class="c1">...</span><span class="c5 c1">,</span><span class="c6 c1">x</span><span
+        class="c6 c1 c4">n</span><span class="c5 c1">)</span><span class="c1">&nbsp;is the </span><span
+        class="c6 c1">n</span><span class="c1">-tuple whose </span><span class="c6 c1">i</span><span class="c1">&rsquo;th coordinate is </span><span
+        class="c6 c1">x</span><span class="c6 c1 c4">i &nbsp;</span><span class="c1">for 1 </span><span
+        class="c32 c1">&le;</span><span class="c32 c6 c1">&nbsp;</span><span class="c6 c1">i </span><span
+        class="c32 c1">&le; </span><span class="c6 c1">n</span><span class="c1">. For any </span><span
+        class="c1">n</span><span class="c1">&nbsp;</span><span class="c32 c1">&ge; </span><span class="c1">2, an n-tuple of objects may be called a </span><span
+        class="c6 c1">tuple</span><span class="c1">.</span></p><p class="c17 c25"><span class="c1"></span></p><p
+        class="c17"><span class="c1">These are the only data objects in LED. Certain objects may be written using shorthand notations described below.</span>
+</p><p class="c17 c25"><span class="c1"></span></p><p class="c17"><span class="c1">A</span><span class="c6 c1">&nbsp;sequence </span><span
+        class="c1">is a set of pairs whose distinct first elements are &nbsp;{1,...</span><span
+        class="c6 c1">,n</span><span class="c1">} for some </span><span class="c6 c1">n</span><span
+        class="c1">&nbsp;</span><span class="c1 c32">&ge; </span><span
+        class="c1">0. As a shorthand, the sequence </span><span class="c5 c1">{(1,</span><span
+        class="c6 c1">x</span><span class="c1 c4">1</span><span class="c5 c1">), </span><span class="c1">...</span><span
+        class="c5 c1">,(</span><span class="c6 c1">n</span><span class="c5 c1">,</span><span class="c6 c1">x</span><span
+        class="c6 c1 c4">n</span><span class="c5 c1">)}</span><span class="c1">&nbsp;may be written as </span><span
+        class="c5 c1">&lt;</span><span class="c6 c1">x</span><span class="c1 c4">1</span><span
+        class="c5 c1">, </span><span class="c1">...</span><span class="c5 c1">,</span><span class="c6 c1">x</span><span
+        class="c6 c1 c4">n</span><span class="c5 c1">&gt;</span><span
+        class="c1">. For example, the sequence &nbsp;</span><span class="c5 c1">{(1, `foo), (2,`bar)}</span><span
+        class="c1">&nbsp;can be written as </span><span class="c5 c1">&lt;`foo,`bar&gt;</span><span class="c1">. </span>
+</p><p class="c17 c25"><span class="c1"></span></p><p class="c17"><span class="c1">A </span><span class="c6 c1">string character</span><span
+        class="c1">&nbsp;is either a printable ascii character which is not backslash or double-quote, &nbsp;or one of the following two-character </span><span
+        class="c6 c1">special string atoms: </span></p><p class="c17 c25"><span class="c1"></span></p><p class="c39">
+    <span class="c1">&nbsp;</span><span class="c5 c1">\\ &nbsp; &nbsp;\t &nbsp; &nbsp;\r &nbsp; \</span><span
+        class="c5 c1 c28"><a class="c16"
+                             href="https://www.google.com/url?q=http://en.wikipedia.org/wiki/Quotation_mark&amp;sa=D&amp;ust=1459178078937000&amp;usg=AFQjCNFNRP3XZtJQaAzPxNIzx-MqrMAgSw">
+    &quot;</a></span><span class="c5 c1">&nbsp; </span></p><p class="c17 c25"><span class="c1"></span></p><p
+        class="c17"><span class="c1">A </span><span class="c6 c1">quoted string</span><span class="c1">&nbsp;consists of zero or more string characters enclosed in double quotes (</span><span
+        class="c28 c5 c1"><a class="c16"
+                             href="https://www.google.com/url?q=http://en.wikipedia.org/wiki/Quotation_mark&amp;sa=D&amp;ust=1459178078938000&amp;usg=AFQjCNGOtW9F4ionY6vsKOsjFObQ-iZfYw">
+    &quot;</a></span><span class="c1">). A quoted string can be written in LED as shorthand for a sequence of integers, whose respective members are the ascii codes represented by its string atoms (where the special string atoms represent ascii codes for backslash, horizontal-tab, carriage-return, and double-quote), For example, the quoted string </span><span
+        class="c28 c5 c1"><a class="c16"
+                             href="https://www.google.com/url?q=http://en.wikipedia.org/wiki/Quotation_mark&amp;sa=D&amp;ust=1459178078939000&amp;usg=AFQjCNFG_mEE5tQtiH1Ti_MlVzx36FMHiA">
+    &quot;</a></span><span class="c5 c1">hi</span><span class="c28 c5 c1"><a class="c16"
+                                                                             href="https://www.google.com/url?q=http://en.wikipedia.org/wiki/Quotation_mark&amp;sa=D&amp;ust=1459178078939000&amp;usg=AFQjCNFG_mEE5tQtiH1Ti_MlVzx36FMHiA">
+    &quot;</a></span><span class="c1">&nbsp;can be written for the sequence </span><span
+        class="c5 c1">&lt;104,105&gt;</span><span class="c1">. </span></p><p class="c17 c25"><span class="c1"></span>
+</p><p class="c17 c25"><span class="c1"></span></p><p class="c17 c25"><span class="c1"></span></p>
+<hr style="page-break-before:always;display:none;"><p class="c17 c25"><span class="c1"></span></p><p class="c17"><span
+        class="c10 c24">2. Primitive operations</span></p><p class="c17"><span class="c9">The following operations are built into LED. In the table below, </span><span
+        class="c0">x</span><span class="c9">&nbsp;and</span><span class="c0">&nbsp;y</span><span class="c9">&nbsp;vary over rational numbers, </span><span
+        class="c0">m</span><span class="c9">&nbsp;and</span><span class="c0">&nbsp;n</span><span class="c9">&nbsp;over integers, </span><span
+        class="c0">p</span><span class="c9">&nbsp;and </span><span class="c0">q</span><span class="c9">&nbsp;over truth values, </span><span
+        class="c0">A </span><span class="c9">and </span><span class="c0">B</span><span class="c9">&nbsp;over finite sets, </span><span
+        class="c0">u</span><span class="c9">&nbsp;over tuples,and &nbsp;</span><span class="c0">s</span><span
+        class="c9">&nbsp;and</span><span class="c0">&nbsp;t</span><span class="c9">&nbsp;over sequences. </span><span
+        class="c0">P</span><span class="c9">&nbsp;stands in for a sentence, </span><span class="c0">v</span><span
+        class="c9">&nbsp;a variable, and</span><span class="c0">&nbsp;d</span><span class="c9">&nbsp;and </span><span
+        class="c0">e</span><span class="c9">&nbsp;for arbitrary terms. </span></p><a
+        id="t.e5d744725a7d0f75fb4f7a0dc3a0f23a478c7e88"></a><a id="t.0"></a>
+<table class="c45">
+    <tbody>
+    <tr class="c35">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c10 c9">LED notation</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c14 c10 c9 c42">Standard notation</span></p>
+        </td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c10 c9">LED notation</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c42 c14 c10 c9">Standard notation</span></p>
+        </td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">+</span><span class="c9">&nbsp;</span><span class="c22 c0 c14">y</span>
+        </p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">+</span><span class="c9">&nbsp;</span><span class="c22 c0 c14">y</span>
+        </p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c22 c0 c14">d = e</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c0">d = e</span><span class="c11 c14 c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(5)</span>
+        </p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">-</span><span class="c9">&nbsp;</span><span class="c22 c0 c14">y</span>
+        </p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">-</span><span class="c9">&nbsp;</span><span class="c22 c0 c14">y</span>
+        </p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c0">e</span><span
+                class="c9">&nbsp;</span><span class="c3">in</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">A</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c0">e </span><span
+                class="c32 c9">&isin;</span><span class="c9">&nbsp;</span><span class="c0">A</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c3">+</span><span
+                class="c9">&nbsp;</span><span class="c22 c0 c14">x</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c3">+</span><span
+                class="c9">&nbsp;</span><span class="c0">x</span></p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c0">A</span><span
+                class="c9">&nbsp;</span><span class="c3">subeq</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">B</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c0">A</span><span
+                class="c9">&nbsp;</span><span class="c32 c9">&sube;</span><span class="c9">&nbsp;</span><span
+                class="c0">B</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c3">-</span><span
+                class="c9">&nbsp;</span><span class="c22 c0 c14">y</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c3">-</span><span
+                class="c9">&nbsp;</span><span class="c0">y</span></p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c0">A</span><span
+                class="c9">&nbsp;</span><span class="c3">union</span><span class="c9">&nbsp; </span><span
+                class="c22 c0 c14">B</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c0">A</span><span
+                class="c9">&nbsp;</span><span class="c32 c9">&cup;</span><span class="c9">&nbsp;</span><span class="c0">B</span>
+        </p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">*</span><span class="c22 c0 c14">&nbsp;y</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">xy</span></p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c0">A</span><span
+                class="c9">&nbsp;</span><span class="c3">nrsec</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">B</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c0">A</span><span
+                class="c9">&nbsp;</span><span class="c9 c18">&cap;</span><span class="c9">&nbsp;</span><span class="c0">B</span>
+        </p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">/</span><span class="c9">&nbsp;</span><span class="c22 c0 c14">y</span>
+        </p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">/</span><span class="c9">&nbsp;</span><span class="c0">y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span
+                class="c11 c14 c9">(1)</span></p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c0">A</span><span
+                class="c9">&nbsp;</span><span class="c3">\</span><span class="c9">&nbsp;</span><span class="c22 c0 c14">B</span>
+        </p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c0">A</span><span
+                class="c9">&nbsp;</span><span class="c3">\</span><span class="c9">&nbsp;</span><span class="c0">B</span>
+        </p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c3">floor(</span><span
+                class="c0">x</span><span class="c3 c11">)</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c9 c18 c44">&nbsp;</span><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 23.00px; height: 20.00px;"><img
+                alt="" src="{% static  'images/image07.png' %}"
+                style="width: 23.00px; height: 20.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span><span class="c9 c18 c44">&nbsp;</span></p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c0">A</span><span class="c3">*</span><span
+                class="c0">B</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c0">A </span><span
+                class="c32 c0">&times; </span><span class="c0">B</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c19 c17"><span class="c3">ceil</span><span class="c9">(</span><span
+                class="c0">x</span><span class="c11 c14 c9">) </span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 23.00px; height: 20.00px;"><img
+                alt=" \lceil x \rceil" src="{% static  'images/image08.png' %}"
+                style="width: 23.00px; height: 20.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span><span class="c18 c34">&nbsp;</span></p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c9">| </span><span class="c0">A</span><span
+                class="c11 c14 c9">&nbsp;|</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c9">| </span><span class="c0">A</span><span
+                class="c11 c14 c9">&nbsp;|</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c3">|</span><span
+                class="c9">&nbsp;</span><span class="c0">x</span><span class="c9">&nbsp;</span><span class="c3">|</span><span
+                class="c11 c14 c9">&nbsp;</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c3">|</span><span
+                class="c9">&nbsp;</span><span class="c0">x</span><span class="c9">&nbsp;</span><span class="c3">|</span><span
+                class="c11 c14 c9">&nbsp;</span></p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c3">Pow</span><span
+                class="c11 c14 c9">(A)</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c1 c46">P</span><span
+                class="c9">(</span><span class="c0">A</span><span class="c11 c14 c9">)</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">m</span><span
+                class="c9">&nbsp;</span><span class="c3">mod</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">n</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">m</span><span
+                class="c9">&nbsp;</span><span class="c3">mod</span><span class="c9">&nbsp;</span><span
+                class="c0">n</span><span class="c11 c14 c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (2)</span>
+        </p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c0">u</span><span class="c3">[</span><span
+                class="c9">&nbsp;</span><span class="c0">i </span><span class="c11 c3">]</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c0">u</span><span
+                class="c0 c4">i</span><span class="c0">&nbsp; </span><span class="c9">(</span><span
+                class="c0">i</span><span class="c9">&rsquo;th coordinate of tuple </span><span class="c0">u</span><span
+                class="c11 c14 c9">)</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">^</span><span class="c9">&nbsp;</span><span class="c22 c0 c14">n</span>
+        </p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c0 c36">n</span><span class="c11 c14 c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (3)</span>
+        </p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c17 c19"><span class="c0">s </span><span
+                class="c3">+ </span><span class="c22 c0 c14">t</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c9">concatenation of sequences </span><span
+                class="c22 c0 c14">&nbsp;</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c3">{</span><span class="c0">m</span><span
+                class="c3">..</span><span class="c0">n</span><span class="c11 c3">}</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c9">{ </span><span
+                class="c0 c27">i</span><span class="c9">&nbsp;</span><span class="c32 c9">&isin;</span><span class="c9">&nbsp;</span><span
+                class="c32 c9">&#8484;</span><span class="c9">&nbsp;| </span><span class="c0">m</span><span class="c9">&nbsp;</span><span
+                class="c32 c9">&le; </span><span class="c0 c27">i</span><span class="c32 c9">&nbsp;&le; </span><span
+                class="c32 c0">n</span><span class="c32 c9">}</span></p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c19 c17"><span class="c0">s</span><span
+                class="c3">[</span><span class="c0">&nbsp;i </span><span class="c11 c3">]</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c19 c17"><span class="c0">s</span><span
+                class="c0 c4">i &nbsp;</span><span class="c9">(</span><span class="c0">i&rsquo;</span><span class="c9">th member of sequence </span><span
+                class="c0">s</span><span class="c11 c14 c9">)</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">&lt;</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">y</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">&lt;</span><span class="c9">&nbsp;</span><span
+                class="c0">y</span></p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c19 c17"><span class="c3">|</span><span
+                class="c0">s</span><span class="c11 c3">|</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c19 c17"><span class="c11 c14 c9">length of a sequence.</span>
+        </p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">&gt;</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">y</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">&gt;</span><span class="c9">&nbsp;</span><span
+                class="c0">y</span></p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c3">some</span><span
+                class="c9">&nbsp;</span><span class="c0">v</span><span class="c9">&nbsp;</span><span
+                class="c3">in</span><span class="c9">&nbsp;</span><span class="c0">A</span><span
+                class="c3">:</span><span class="c9">&nbsp;</span><span class="c22 c0 c14">P</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><img src="../static/images/image00.png"><span
+                class="c0">v</span><span class="c9">&nbsp;</span><img src="{% static  'images/image01.png' %}"><span class="c0">A</span><span
+                class="c3">:</span><span class="c9">&nbsp;</span><span class="c0">P</span><span class="c11 c14 c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(6)</span>
+        </p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">&lt;=</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">y</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c32 c9">&le;</span><span class="c9">&nbsp;</span><span
+                class="c0">y</span></p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c3">all </span><span
+                class="c0">v</span><span class="c9">&nbsp;</span><span class="c3">in</span><span
+                class="c9">&nbsp;</span><span class="c0">A</span><span class="c3">:</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">P</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><img src="{% static  'images/image02.png' %}"><span
+                class="c0">v</span><span class="c9">&nbsp;</span><img src="{% static  'images/image01.png' %}"><span class="c0">A</span><span
+                class="c3">:</span><span class="c9">&nbsp;</span><span class="c0">P </span><span class="c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(6) &nbsp; &nbsp; &nbsp; &nbsp; </span>
+        </p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c3">&gt;=</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">y</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">x</span><span
+                class="c9">&nbsp;</span><span class="c32 c9">&ge;</span><span class="c9">&nbsp;</span><span
+                class="c0">y</span></p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c9">{ </span><span class="c0">t </span><span
+                class="c9">&nbsp;| </span><span class="c0">P</span><span class="c11 c14 c9">&nbsp;} </span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><span class="c9">{ </span><span class="c0">t </span><span
+                class="c9">&nbsp;| </span><span class="c0">P</span><span class="c11 c14 c9">&nbsp;} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+        </p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">p</span><span
+                class="c9">&nbsp;</span><span class="c3">&amp;</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">q</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">p</span><span
+                class="c9">&nbsp;</span><span class="c9 c33">&and;</span><span class="c9">&nbsp;</span><span class="c0">q</span><span
+                class="c11 c14 c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (4)</span>
+        </p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c3">Sum[</span><span
+                class="c0">P</span><span class="c3">]</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">t</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><img src="{% static  'images/image03.png' %}"><span
+                class="c6 c1">t</span><span class="c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+        </p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">p</span><span
+                class="c9">&nbsp;</span><span class="c3">or</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">q</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">p</span><span
+                class="c9">&nbsp;</span><span class="c9 c33">&or;</span><span class="c9">&nbsp;</span><span
+                class="c0">q </span><span class="c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(4)</span>
+        </p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c3">Prod[</span><span
+                class="c0">P</span><span class="c3">]</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">t</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><img src="{% static  'images/image04.png' %}"><span
+                class="c6 c1">t</span><span class="c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+        </p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c3">~</span><span
+                class="c22 c0 c14">p</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0 c33">&not;</span><span class="c0">p</span><span
+                class="c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (4)</span>
+        </p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c3">Union[</span><span
+                class="c0">P</span><span class="c3">]</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">t</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><img src="{% static  'images/image05.png' %}"><span
+                class="c6 c1">t</span><span class="c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (6) &nbsp; &nbsp;</span>
+        </p></td>
+    </tr>
+    <tr class="c41">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">p</span><span
+                class="c9">&nbsp;</span><span class="c3">=&gt;</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">q</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">p</span><span
+                class="c9">&nbsp;</span><span class="c9 c33">&rArr;</span><span class="c9">&nbsp;</span><span
+                class="c0">q </span><span class="c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(4)</span>
+        </p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c3">Nrsec[</span><span
+                class="c9">P</span><span class="c3">]</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">t</span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13"><img src="{% static  'images/image06.png' %}"><span
+                class="c6 c1">t</span><span class="c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(6) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+        </p></td>
+    </tr>
+    <tr class="c41">
+        <td class="c21" colspan="1" rowspan="1"><p class="c13"><span class="c0">p</span><span
+                class="c9">&nbsp;</span><span class="c3">&lt;=&gt;</span><span class="c9">&nbsp;</span><span
+                class="c22 c0 c14">q</span></p></td>
+        <td class="c2" colspan="1" rowspan="1"><p class="c13"><span class="c0">p</span><span
+                class="c9">&nbsp;</span><span class="c9 c33">&hArr;</span><span class="c9">&nbsp;</span><span
+                class="c0">q </span><span class="c9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (4)</span>
+        </p></td>
+        <td class="c29" colspan="1" rowspan="1"><p class="c13 c25"><span class="c11 c3"></span></p></td>
+        <td class="c12" colspan="1" rowspan="1"><p class="c13 c25"><span class="c11 c14 c1"></span></p></td>
+    </tr>
+    </tbody>
+</table><p><span class="c10 c1"></span></p><p><span class="c10 c1"></span></p><p><span class="c10 c1"></span></p><p>
+    <span class="c10 c1"></span></p><p><span class="c10 c1"></span></p><p><span class="c10 c1">Notes on semantics</span>
+</p><p><span class="c10 c1"></span></p>
+<ol class="c30 lst-kix_yar19rjiwyug-0 start" start="1">
+    <li class="c23 c17"><span class="c6 c1">x</span><span class="c5 c6 c1">/</span><span class="c6 c1">y</span><span
+            class="c1">&nbsp;is defined if and only if </span><span class="c6 c1">&nbsp;y</span><span
+            class="c32 c6">&ne;</span><span class="c1">0.</span></li>
+    <li class="c23 c17"><span class="c6 c1">m</span><span class="c1">&nbsp;</span><span class="c5 c1">mod</span><span
+            class="c6 c1">&nbsp;n</span><span class="c1">&nbsp;is not defined when </span><span
+            class="c6 c1">n</span><span class="c1">&nbsp;</span><span class="c32 c1">&le; </span><span
+            class="c1">0</span></li>
+    <li class="c23 c17"><span class="c1">0</span><span class="c5 c1">^</span><span class="c1">0 is not defined</span>
+    </li>
+    <li class="c17 c23"><span class="c5 c1">false &amp;</span><span class="c6 c1">&nbsp;q</span><span class="c1">&nbsp;is false even if </span><span
+            class="c6 c1">q</span><span class="c1">&nbsp;is undefined, and </span><span class="c5 c1">false =&gt;</span><span
+            class="c1">&nbsp;</span><span class="c6 c1">q</span><span class="c1">&nbsp;is true even when</span><span
+            class="c6 c1">&nbsp;q</span><span class="c1">&nbsp;is undefined. The other Boolean connectives are strict, in the sense that all of their arguments must be defined in order for them to return a value.</span>
+    </li>
+    <li class="c23 c17"><span class="c1">Rational numbers, sets, tuples, atoms, truth values, and lambda expressions are pairwise disjoint; that is, </span><span
+            class="c6 c1">d</span><span class="c1">=</span><span class="c6 c1">e</span><span class="c1">&nbsp;is false if </span><span
+            class="c6 c1">d</span><span class="c1">&nbsp;is one of these and</span><span
+            class="c6 c1">&nbsp;e</span><span class="c1">&nbsp;is another. Equality of lambda expressions is intensional; that is, two lambda expressions are equal if and only if one can be obtained from the other by alpha reduction (i.e., consistent renaming of variables).</span>
+    </li>
+    <li class="c23 c17"><span class="c1">In all quantifiers and aggregates,</span><span
+            class="c6 c1">&nbsp;P</span><span class="c1">&nbsp;must be a simply solvable sentence, defined below.</span>
+    </li>
+</ol><p class="c17 c25"><span class="c1"></span></p><p class="c17 c25"><span class="c1"></span></p><p class="c17 c25">
+    <span class="c10 c1"></span></p><p class="c17"><span class="c10 c1">Syntax</span></p><p class="c17 c25"><span
+        class="c10 c1"></span></p><p class="c17"><span class="c1">The precedence and association of these operators are the same as for their informal counterparts. The table below gives the precedence relation, where operators higher in the table bind tighter than those lower in the table, and infixes occuring in the same row associate together from the left or right, as indicated.</span>
+</p><p><span class="c1"></span></p><p><span class="c1"></span></p><a
+        id="t.fd34b800591a70e9baf824901a0b78bd52810742"></a><a id="t.1"></a>
+<table class="c45">
+    <tbody>
+    <tr class="c15">
+        <td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c11 c3">^ </span></p></td>
+        <td class="c31" colspan="1" rowspan="1"><p class="c13"><span class="c9">right</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c3">+</span><span
+                class="c27 c9 c4">1</span><span class="c3">&nbsp;-</span><span class="c27 c9 c4">1</span></p></td>
+        <td class="c31" colspan="1" rowspan="1"><p class="c13"><span class="c9">right</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c11 c3">* / mod nrsec</span></p></td>
+        <td class="c31" colspan="1" rowspan="1"><p class="c13"><span class="c9">left</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c3">+</span><span
+                class="c27 c9 c4">2</span><span class="c3">&nbsp; -</span><span class="c27 c9 c4">2</span><span
+                class="c11 c3">&nbsp; union &nbsp;\</span></p></td>
+        <td class="c31" colspan="1" rowspan="1"><p class="c13"><span class="c9">left</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c11 c3">&lt; &nbsp;&lt;= &nbsp; &nbsp;= &gt; &gt;= &nbsp;in &nbsp;subeq </span>
+        </p></td>
+        <td class="c31" colspan="1" rowspan="1"><p class="c13 c25"><span class="c11 c9 c14"></span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c3">some all</span></p></td>
+        <td class="c31" colspan="1" rowspan="1"><p class="c13"><span class="c9">right</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c11 c3">~</span></p></td>
+        <td class="c31" colspan="1" rowspan="1"><p class="c13"><span class="c9">right</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c11 c3">&amp;</span></p></td>
+        <td class="c31" colspan="1" rowspan="1"><p class="c13"><span class="c9">left</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c11 c3">or</span></p></td>
+        <td class="c31" colspan="1" rowspan="1"><p class="c13"><span class="c9">left</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c11 c3">=&gt;</span></p></td>
+        <td class="c31" colspan="1" rowspan="1"><p class="c13"><span class="c9">right</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c11 c3">&lt;=&gt;</span></p></td>
+        <td class="c31" colspan="1" rowspan="1"><p class="c13"><span class="c9">right</span></p></td>
+    </tr>
+    <tr class="c15">
+        <td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c11 c3">lambda</span></p></td>
+        <td class="c31" colspan="1" rowspan="1"><p class="c13 c25"><span class="c11 c3"></span></p></td>
+    </tr>
+    </tbody>
+</table><p><span class="c1"></span></p><p class="c17"><span class="c1">The </span><span class="c5 c1">Sum</span><span
+        class="c1">, </span><span class="c5 c1">Prod</span><span class="c1">, </span><span
+        class="c5 c1">Union</span><span class="c1">, and </span><span class="c5 c1">Nrsec</span><span class="c1">&nbsp;operators have the same precedence as their infix counterparts </span><span
+        class="c5 c1">+</span><span class="c1">,</span><span class="c5 c1">&nbsp;*</span><span class="c1">, </span><span
+        class="c5 c1">U</span><span class="c1">&nbsp;and </span><span class="c5 c1">Nrsec</span><span
+        class="c1">.</span></p><p><span class="c10 c1"></span></p><p><span class="c10 c1"></span></p><p><span
+        class="c10 c1">Simply solvable sentences</span></p><p><span class="c1"></span></p><p><span class="c1"></span>
+</p><p class="c17"><span class="c1">In all quantifiers and aggregates shown in the table,</span><span class="c6 c1">&nbsp;P</span><span
+        class="c1">&nbsp;must be a simply solvable sentence. Intuitively, a sentences is &ldquo;simply solvable&rdquo;
+    if its free variables are restricted to finite sets in a straightforward way. This is defined more precisely below.</span>
+</p><p><span class="c1"></span></p><p><span class="c1">A </span><span class="c6 c1">pattern</span><span class="c1">&nbsp;is an expression in which no variable occurs free in an argument of a function. More precisely a pattern is either a closed expression, a variable, a tuple </span><span
+        class="c5 c1">(</span><span class="c6 c1">x</span><span class="c1 c4">1</span><span class="c5 c1">,</span><span
+        class="c1">...</span><span class="c5 c1">,</span><span class="c6 c1">x</span><span
+        class="c6 c1 c4">n</span><span class="c5 c1">)</span><span class="c1">&nbsp;where each </span><span
+        class="c6 c1">x</span><span class="c6 c1 c4">i</span><span
+        class="c1">&nbsp;is a pattern, or a set roster </span><span class="c5 c1">{</span><span
+        class="c6 c1">x</span><span class="c1 c4">1</span><span class="c5 c1">,</span><span class="c1">...</span><span
+        class="c5 c1">,</span><span class="c6 c1">x</span><span class="c6 c1 c4">n</span><span
+        class="c5 c1">}</span><span class="c1">&nbsp;where each </span><span class="c6 c1">x</span><span
+        class="c6 c1 c4">i</span><span class="c1">&nbsp;is a pattern. The set of </span><span class="c6 c1">simply solvable sentences</span><span
+        class="c1">&nbsp;is the smallest set of sentences satisfying the following: </span></p><p><span
+        class="c1"></span></p>
+<ul class="c30 lst-kix_c8lgl2kzw9qh-0 start">
+    <li class="c23"><span class="c1">Every closed sentence is simply solvable.</span></li>
+    <li class="c23"><span class="c1">Any atomic sentence, all of whose terms are either constants or variables ranging over a finite type, is simply solvable.</span>
+    </li>
+    <li class="c23"><span class="c6 c1">x</span><span class="c1">&nbsp;</span><span class="c5 c1">in</span><span
+            class="c1">&nbsp;</span><span class="c6 c1">s</span><span class="c1">, where </span><span
+            class="c6 c1">x</span><span class="c1">&nbsp;is a pattern and </span><span class="c6 c1">s</span><span
+            class="c1">&nbsp;is closed object term, is simply solvable.</span></li>
+    <li class="c23"><span class="c6 c1">x</span><span class="c1">&nbsp;= </span><span class="c1 c6">y</span><span
+            class="c1">&nbsp;is simply solvable if at both are patterns and at least one of the two is closed. </span>
+    </li>
+    <li class="c23"><span class="c6 c1">P</span><span class="c1">&nbsp;</span><span class="c5 c1">&amp;</span><span
+            class="c1">&nbsp;</span><span class="c6 c1">Q</span><span
+            class="c1">&nbsp;is simply solvable if </span><span class="c6 c1">P</span><span class="c1">&nbsp;is solvable and </span><span
+            class="c6 c1">Q&rsquo;</span><span class="c1">&nbsp;is simply solvable, where </span><span
+            class="c6 c1">Q&rsquo;</span><span class="c1">&nbsp;is obtained by from </span><span
+            class="c6 c1">Q</span><span class="c1">&nbsp;by replacing the free variables of </span><span
+            class="c6 c1">P</span><span class="c1">&nbsp;with arbitrary constants. </span></li>
+    <li class="c23"><span class="c6 c1">P</span><span class="c1">&nbsp;</span><span class="c5 c1">or</span><span
+            class="c1">&nbsp;</span><span class="c6 c1">Q</span><span
+            class="c1">&nbsp;is simply solvable if </span><span class="c6 c1">P</span><span class="c1">&nbsp;and </span><span
+            class="c6 c1">Q</span><span class="c1">&nbsp;are both simply solvable.</span></li>
+    <li class="c23"><span class="c6 c1">P</span><span class="c1">&nbsp;</span><span class="c5 c1">=&gt;</span><span
+            class="c6 c1">&nbsp;Q</span><span class="c1">&nbsp;is simply solvable if </span><span class="c5 c1">~</span><span
+            class="c1">(</span><span class="c6 c1">P</span><span class="c1">&nbsp;</span><span
+            class="c5 c1">&amp;</span><span class="c1">&nbsp;</span><span class="c5 c1">~</span><span
+            class="c6 c1">Q</span><span class="c1">) is simply solvable.</span></li>
+    <li class="c23"><span class="c6 c1">P</span><span class="c1">&nbsp;&lt;</span><span class="c5 c1">=&gt;</span><span
+            class="c6 c1">&nbsp;Q </span><span class="c1">s simply solvable if both </span><span
+            class="c6 c1">P</span><span class="c1">&nbsp;and </span><span class="c6 c1">Q</span><span class="c1">&nbsp;are simply solvable.</span>
+    </li>
+</ul><p><span class="c1"></span></p><p><span class="c1">For example, the following sentence is simply solvable:</span>
+</p><p><span class="c1"></span></p><p class="c40"><span class="c5 c1">x in {1..10} &amp; x mod 2 = 0 &amp; y in {1..x} &amp; x+y&lt;9</span>
+</p><p><span class="c1"></span></p><p><span class="c1">and the following is not: </span></p><p><span class="c1"></span>
+</p><p><span class="c5 c1">&nbsp; &nbsp; &nbsp;a,b,c,n in Int &amp; n&gt;2 &amp; a^n + b^n = c^n</span></p><p><span
+        class="c1"></span></p><p><span class="c1"></span></p><p><span class="c1"></span></p><p><span
+        class="c10 c24"></span></p>
+<hr style="page-break-before:always;display:none;"><p><span class="c10 c24"></span></p><p><span class="c10 c24">3. LED Programs</span>
+</p><p class="c8 c17"><span class="c1"></span></p><p class="c17 c20"><span class="c1">An untyped LED program is an asciii text file which consists of documentary text, variable declarations, and function definitions.</span>
+</p><p class="c20 c17"><span class="c1">Within an LED program, a </span><span class="c6 c1">start symbol </span><span
+        class="c1">is a greater-than sign (&gt;) that is the first non-whitesapce character of a new line, Each formal element of the program, i.e. definition or declaration, begins with start symbol and proceeds to the next symbol atom or blank line. All other text within the program is documentary. The following is an example of documented simple type definitions in &nbsp;an LED program.</span>
+</p><p class="c8"><span class="c1"></span></p><p class="c20"><span class="c1">A variable is simply an identifier. An identifier occurs as a variable if (1) it occurs in a place where only a variable may occur (function parameter, quantified variable, in a lambda expression, etc.), or (2) it is declared as a variable before it is used in the program. Variable declarations are written as follows: </span>
+</p><p class="c8"><span class="c1"></span></p><p class="c20"><span class="c1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+        class="c5 c1">var</span><span class="c1">&nbsp;</span><span class="c6 c1">x</span></p><p class="c20"><span
+        class="c1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c5 c1">vars</span><span
+        class="c1">&nbsp;</span><span class="c6 c1">x</span><span class="c1 c4">1</span><span
+        class="c5 c1">,</span><span class="c1">...</span><span class="c5 c1">,</span><span
+        class="c6 c1">&nbsp;x</span><span class="c6 c1 c4">n</span></p><p class="c8"><span class="c1"></span></p><p
+        class="c20"><span class="c1">where the </span><span class="c6 c1">x</span><span class="c1">&rsquo;s are identifiers. A</span><span
+        class="c6 c1">&nbsp;variant</span><span class="c1">&nbsp;of an identifier </span><span
+        class="c6 c1">x</span><span class="c1">&nbsp;is either</span><span class="c6 c1">&nbsp;x</span><span class="c1">&nbsp;itself, or </span><span
+        class="c6 c1">x</span><span class="c1">&nbsp;followed by 1 or more digits. Any variant of a variable declared in a program is a variable of that program.</span>
+</p><p class="c8"><span class="c1"></span></p><p class="c20"><span class="c1">The general form of an LED function definition is</span>
+</p><p class="c8"><span class="c5 c1 c4"></span></p><p class="c20 c26"><span class="c5 c1">i</span><span
+        class="c5 c1">f </span><span class="c5 c6 c1">P</span><span class="c5 c1">&nbsp;then </span><span
+        class="c5 c6 c1">f</span><span class="c5 c1">(</span><span class="c5 c6 c1">x</span><span
+        class="c5 c1 c4">1</span><span class="c5 c1">,&hellip;,</span><span class="c5 c6 c1">x</span><span
+        class="c5 c6 c1 c4">n</span><span class="c5 c1">) = &nbsp;</span><span class="c5 c6 c1">B</span><span
+        class="c5 c1 c4">1</span><span class="c5 c1">&nbsp;if </span><span class="c5 c6 c1">G</span><span
+        class="c5 c1 c4">1</span><span class="c5 c1">;&hellip;; </span><span class="c5 c6 c1">B</span><span
+        class="c5 c1 c4">k</span><span class="c5 c1">&nbsp;if </span><span class="c5 c6 c1">G</span><span
+        class="c5 c1 c4">k</span></p><p class="c8"><span class="c5 c1"></span></p><p class="c20"><span
+        class="c1">where </span></p>
+<ul class="c30 lst-kix_7tnhotqh1qk8-0 start">
+    <li class="c20 c23"><span class="c6 c1">f</span><span class="c1">&nbsp; is a function symbol, &nbsp;</span><span
+            class="c6 c1">B&rsquo;s </span><span class="c1">are terms,</span><span class="c6 c1">&nbsp;G</span><span
+            class="c1">&#39;s are statements, </span><span class="c6 c1">&nbsp;x&rsquo;s are variables, </span><span
+            class="c1">&nbsp;</span><span class="c6 c1">P</span><span class="c5 c1">[</span><span
+            class="c5 c6 c1">x</span><span class="c5 c1 c4">1</span><span class="c5 c1">:=c1</span><span class="c5 c1">,&hellip;,</span><span
+            class="c5 c6 c1">x</span><span class="c5 c6 c1 c4">n</span><span class="c5 c1">:=c1]</span><span
+            class="c6 c1">&nbsp;</span><span class="c1">is a simply solvable sentence for any substitution </span><span
+            class="c5 c1">[</span><span class="c5 c6 c1">x</span><span class="c5 c1 c4">1</span><span class="c5 c1">:=c1,&hellip;,</span><span
+            class="c5 c6 c1">x</span><span class="c5 c6 c1 c4">n</span><span class="c5 c1">:=c1]</span><span class="c1">,</span><span
+            class="c1">&nbsp;and</span></li>
+    <li class="c20 c23"><span class="c1">no variable occurs free in the right hand side (after =) &nbsp;that does not occur free in the left hand side (before =).</span>
+    </li>
+</ul><p class="c8"><span class="c1"></span></p><p class="c20"><span
+        class="c1">The reading of the definition is: &nbsp;</span></p><p class="c8"><span class="c1"></span></p><p
+        class="c20 c39"><span class="c6 c1">f is a partial function from T</span><span class="c1 c4">1</span><span
+        class="c6 c1">&nbsp;to T</span><span class="c1 c4">2</span><span class="c6 c1">, and for &nbsp;i in</span><span
+        class="c1">&nbsp;{1..</span><span class="c6 c1">k</span><span class="c1">} </span><span
+        class="c6 c1">&nbsp;if P</span><span class="c1">&nbsp;</span><span class="c6 c1">and G</span><span
+        class="c6 c1 c4">i &nbsp;</span><span class="c6 c1">hold then f</span><span class="c1">(</span><span
+        class="c6 c1">x</span><span class="c1 c4">1</span><span class="c1">,..</span><span class="c6 c1">x</span><span
+        class="c6 c1 c4">n</span><span class="c1">) is defined to be </span><span class="c6 c1">B</span><span
+        class="c1 c4">i</span></p><p class="c8"><span class="c1"></span></p><p class="c20"><span class="c1">The following syntactic sugar can be used when writing function definitions: </span>
+</p><p class="c8"><span class="c1"></span></p>
+<ul class="c30 lst-kix_st3v25vd1gjd-0 start">
+    <li class="c20 c23"><span class="c1">If </span><span class="c6 c1">P </span><span class="c1">is </span><span
+            class="c5 c1">true</span><span class="c1">&nbsp;then &nbsp;</span><span class="c5 c1">if </span><span
+            class="c6 c1">P</span><span class="c1">&nbsp; can be omitted. </span></li>
+    <li class="c20 c23"><span class="c1">We may write</span><span class="c6 c1">&nbsp; B</span><span
+            class="c6 c1 c4">k</span><span class="c1">&nbsp;</span><span class="c5 c1">otherwise</span><span class="c1">&nbsp; in place of &nbsp;</span><span
+            class="c5 c6 c1">B</span><span class="c5 c1 c4">k</span><span class="c5 c1">&nbsp;if ~(</span><span
+            class="c5 c6 c1">G</span><span class="c5 c1 c4">k</span><span class="c5 c1">&nbsp;or &hellip;
+        or </span><span class="c5 c1">G</span><span class="c1 c4 c5">k-1</span><span class="c5 c1">)</span></li>
+    <li class="c20 c23"><span class="c1">We may write </span><span class="c6 c1">G</span><span class="c1">&nbsp;in place of &nbsp;</span><span
+            class="c6 c1">G</span><span class="c5 c1">&nbsp;if true,</span><span class="c1">&nbsp;when the latter is the entire body of the definition.</span>
+    </li>
+    <li class="c20 c23"><span class="c1">We may write part of the precondition </span><span class="c6 c1">P </span><span
+            class="c1">at the end of the definition using the keyword </span><span class="c5 c1">where</span><span
+            class="c1">. That is, we may write</span></li>
+</ul><p class="c8"><span class="c1"></span></p><p class="c20 c26"><span
+        class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c5 c1">If </span><span
+        class="c5 c6 c1">P</span><span class="c5 c1">&nbsp;then </span><span class="c5 c6 c1">f</span><span
+        class="c5 c1">(</span><span class="c5 c6 c1">x</span><span class="c5 c1 c4">1</span><span
+        class="c5 c1">,...,</span><span class="c5 c6 c1">x</span><span class="c5 c1 c4">n</span><span class="c5 c1">) = &nbsp;</span><span
+        class="c5 c6 c1">B</span><span class="c5 c1 c4">1</span><span class="c5 c1">&nbsp;if </span><span
+        class="c5 c6 c1">G</span><span class="c5 c1 c4">1 </span><span class="c5 c1">; &hellip; ; </span><span
+        class="c5 c6 c1">B</span><span class="c5 c1 c4">k</span><span class="c5 c1">&nbsp;if </span><span
+        class="c5 c6 c1">G</span><span class="c5 c1 c4">k</span><span class="c5 c1">&nbsp; where </span><span
+        class="c5 c6 c1">P</span><span class="c5 c1">&rsquo;</span></p><p class="c8"><span class="c1"></span></p><p
+        class="c20"><span class="c1">in place of </span></p><p class="c8"><span class="c1"></span></p><p class="c20">
+    <span class="c1">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c5 c1">If </span><span
+        class="c5 c6 c1">P </span><span class="c5 c1">&amp;</span><span class="c5 c6 c1">&nbsp;P&rsquo;</span><span
+        class="c5 c1">&nbsp;then </span><span class="c5 c6 c1">f</span><span class="c5 c1">(</span><span
+        class="c5 c6 c1">x</span><span class="c5 c1 c4">1</span><span class="c5 c1">,...,</span><span
+        class="c5 c6 c1">x</span><span class="c5 c1 c4">n</span><span class="c5 c1">) = &nbsp;</span><span
+        class="c5 c6 c1">B</span><span class="c5 c1 c4">1</span><span class="c5 c1">&nbsp;if </span><span
+        class="c5 c6 c1">G</span><span class="c5 c1 c4">1 </span><span class="c5 c1">; &hellip; ; </span><span
+        class="c5 c6 c1">B</span><span class="c5 c1 c4">k</span><span class="c5 c1">&nbsp;if </span><span
+        class="c5 c6 c1">G</span><span class="c5 c1 c4">k</span></p><p class="c8 c17"><span class="c1"></span></p>
+<ul class="c30 lst-kix_rmyf1rf4qdon-0 start">
+    <li class="c20 c23 c17"><span class="c1">In case a function</span><span class="c6 c1">&nbsp;f </span><span
+            class="c1">ranges over truth values, we may write</span></li>
+</ul><p class="c8 c17"><span class="c1"></span></p><p class="c20 c17"><span class="c5 c1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;if </span><span
+        class="c5 c6 c1">P</span><span class="c5 c1">&nbsp;then </span><span class="c5 c6 c1">f</span><span
+        class="c5 c1">(</span><span class="c5 c6 c1">x</span><span class="c5 c1 c4">1</span><span class="c5 c1">,&hellip;,</span><span
+        class="c5 c6 c1">x</span><span class="c5 c6 c1 c4">n</span><span class="c5 c1">) iff </span><span
+        class="c5 c6 c1">Q</span></p><p class="c8 c17"><span class="c5 c6 c1"></span></p><p class="c20 c40 c17"><span
+        class="c1">in place of </span></p><p class="c8 c17"><span class="c1"></span></p><p class="c20 c17"><span
+        class="c5 c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if </span><span class="c5 c6 c1">P</span><span class="c5 c1">&nbsp;then </span><span
+        class="c5 c6 c1">f</span><span class="c5 c1">(</span><span class="c5 c6 c1">x</span><span
+        class="c5 c1 c4">1</span><span class="c5 c1">,&hellip;,</span><span class="c5 c6 c1">x</span><span
+        class="c5 c6 c1 c4">n</span><span class="c5 c1">) = &nbsp;</span><span class="c5 c6 c1">Q</span></p><p
+        class="c8 c26"><span class="c5 c1 c4"></span></p><p class="c17 c25"><span class="c1"></span></p><p
+        class="c17 c25"><span class="c1"></span></p>
+<hr><p class="c17 c25"><span class="c1"></span></p><p class="c17 c25"><span class="c1"></span></p><p class="c17 c25">
+    <span class="c10 c1"></span></p>
+<hr style="page-break-before:always;display:none;"><p class="c17 c25"><span class="c1 c10"></span></p><p class="c17">
+    <span class="c10 c1">Symbols: </span></p><p class="c17 c25"><span class="c1"></span></p><p class="c17"><span
+        class="c1">&nbsp;Special symbols are the following 27 symbols: </span></p><p class="c17 c25"><span
+        class="c1"></span></p><p class="c17"><span
+        class="c1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+        class="c5 c1">` ~ ^ &amp; * ( ) - + = </span></p><p class="c26 c17"><span class="c5 c1">&lt; &gt; [ ] { } : ; / . </span>
+</p><p class="c26 c17"><span class="c5 c1">, | =&gt; &lt;=&gt; \ &lt;= &gt;=</span></p><p class="c26 c17 c25"><span
+        class="c5 c1"></span></p><p class="c26 c17 c25"><span class="c5 c1"></span></p><p class="c17"><span class="c1">A symbol is </span>
+</p>
+<ol class="c30 lst-kix_s4d8lpj9xxhw-0 start" start="1">
+    <li class="c23 c17"><span class="c1">a numeral</span></li>
+    <li class="c23 c17"><span class="c1">an identifier, </span></li>
+    <li class="c23 c17"><span class="c1">an atom, </span></li>
+    <li class="c23 c17"><span class="c1">a quoted string, or </span></li>
+    <li class="c23 c17"><span class="c1">a special symbol.</span></li>
+</ol><p class="c17 c25"><span class="c1"></span></p><p class="c26 c17 c25"><span class="c5 c1"></span></p><p
+        class="c17"><span class="c5 c1">States of the tokenizing machine: </span></p>
+<ol class="c30 lst-kix_g4vwgdgrdpp4-0 start" start="1">
+    <li class="c23 c17"><span class="c5 c1">empty </span></li>
+    <li class="c23 c17"><span class="c5 c1">identifier</span></li>
+    <li class="c23 c17"><span class="c5 c1">backQuote</span></li>
+    <li class="c23 c17"><span class="c5 c1">atom</span></li>
+    <li class="c23 c17"><span class="c5 c1">digs</span></li>
+    <li class="c23 c17"><span class="c5 c1">digsPt</span></li>
+    <li class="c23 c17"><span class="c5 c1">digsPtDigs</span></li>
+    <li class="c23 c17"><span class="c5 c1">firstOfSpec</span></li>
+    <li class="c23 c17"><span class="c5 c1">twoCharSpec</span></li>
+    <li class="c23 c17"><span class="c5 c1">&lt;=&gt;</span></li>
+    <li class="c23 c17"><span class="c5 c1">readingStr</span></li>
+    <li class="c23 c17"><span class="c5 c1">strBslash</span></li>
+</ol><p class="c17 c25"><span class="c5 c1"></span></p><p class="c17 c25"><span class="c5 c1"></span></p><p class="c17">
+    <span class="c5 c1">done: </span></p><p class="c17"><span class="c5 c1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</span>
+</p><p class="c17 c25"><span class="c5 c1"></span></p><p class="c17"><span class="c5 c1">to do: </span></p>
+<ul class="c30 lst-kix_ett6ywh983l3-0 start">
+    <li class="c23 c17"><span class="c5 c1">special</span></li>
+    <li class="c23 c17"><span class="c5 c1">numeral</span></li>
+    <li class="c23 c17"><span class="c5 c1">atoms</span></li>
+    <li class="c23 c17"><span class="c5 c1">quoted strings</span></li>
+</ul><p class="c17 c25"><span class="c5 c1"></span></p><p class="c17"><span class="c5 c1">letter, specstart, digit, backquote, doublequote</span>
+</p>
